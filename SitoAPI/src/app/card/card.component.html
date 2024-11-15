@@ -1,9 +1,14 @@
-<div *ngIf="loading">Loading...</div>
-<div *ngIf="!loading && cardData">
+<div>
+<div *ngIf="loading" class="loading-container">
+  Loading...
+</div>
+
+<div *ngIf="!loading && cardData" class="card-container">
   <h1>{{ cardData.name }}</h1>
   <img [src]="cardData.image_uris.normal" alt="{{ cardData.name }}">
   <p><strong>Type:</strong> {{ cardData.type_line }}</p>
   <p><strong>Text:</strong> {{ cardData.oracle_text }}</p>
   <p><strong>Set:</strong> {{ cardData.set_name }}</p>
   <p><strong>Price:</strong> ${{ cardData.prices.usd }}</p>
+</div>
 </div>

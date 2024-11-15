@@ -1,0 +1,27 @@
+
+  .loading-container,
+  .card-container {
+    position: absolute;
+    top: 10%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-align: center; 
+    width: 90%; 
+    max-width: 500px;
+  }
+  
+  
+  .card-container img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  
+  .card-container p {
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+
+  

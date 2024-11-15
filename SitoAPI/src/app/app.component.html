@@ -1,3 +1,8 @@
+
+<div align="center">
+  <input [(ngModel)]="searchTerm" placeholder="Search for a card" />
+  <button (click)="searchCard()">Search</button>
+  </div>
 <nav align="center">
   <ul>
     <button><a routerLink="/card/jeweled-lotus">Jeweled Lotus</a></button>
@@ -7,6 +12,6 @@
     <button><a routerLink="/card/thallid">Thallid</a></button>
   </ul>
 </nav>
-<input [(ngModel)]="searchTerm" placeholder="Search for a card" />
-<button (click)="searchCard()">Search</button>
+<br>
+
 <router-outlet></router-outlet>
