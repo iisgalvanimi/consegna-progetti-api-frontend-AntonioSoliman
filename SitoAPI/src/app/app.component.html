@@ -7,6 +7,7 @@
       <li><a routerLink="/card/thalid">Thalid</a></li>
     </ul>
   </nav>
-  
+<input [(ngModel)]="searchTerm" placeholder="Search for a card" />
+<button (click)="searchCard()">Search</button>
   <router-outlet></router-outlet>
   
