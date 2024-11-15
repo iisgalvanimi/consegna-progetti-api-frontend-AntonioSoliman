@@ -1,18 +1,9 @@
-<h2>Basic Request</h2>
-<button type="button" (click)="makeRequest()">Make Request</button>
-<button type="button" (click)="makeCompactPost()"> MakePost</button>
-<div *ngIf="loading">loading...</div>
-<pre>{{data | json}}</pre>
-<pre>{{fooData | json}}</pre>
-
-<button type="button" (click)="makeTypedRequest()">Make typed request</button>
-
-<!--Uso un ciclo for per scandire tutta la lista di articoli-->
-<div *ngFor="let art of fooData">
-   <h3>{{art.title}}</h3>
-   <b>post {{art.id}} di utente #: {{art.userId}}</b>
-   <div>
-       {{art.body}}
-   </div>
-   <hr>
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="!loading && cardData">
+  <h1>{{ cardData.name }}</h1>
+  <img [src]="cardData.image_uris.normal" alt="{{ cardData.name }}">
+  <p><strong>Type:</strong> {{ cardData.type_line }}</p>
+  <p><strong>Text:</strong> {{ cardData.oracle_text }}</p>
+  <p><strong>Set:</strong> {{ cardData.set_name }}</p>
+  <p><strong>Price:</strong> ${{ cardData.prices.usd }}</p>
 </div>
